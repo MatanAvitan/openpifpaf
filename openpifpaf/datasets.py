@@ -6,7 +6,6 @@ from PIL import Image
 
 from . import transforms, utils
 
-
 from openpifpaf.consts import ANNOTATIONS_TRAIN, ANNOTATIONS_VAL, IMAGE_DIR_TRAIN, IMAGE_DIR_VAL
 
 LOG = logging.getLogger(__name__)
