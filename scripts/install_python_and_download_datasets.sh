@@ -3,8 +3,10 @@ mkdir github;
 cd github ; git clone https://github.com/MatanAvitan/openpifpaf.git
 cd openpifpaf;
 sudo apt install python3;
-python3 setup.py install;
-pip3 install pycocotools;
+sudo apt-get install python3-setuptools;
+sudo apt-get update && sudo apt install python3-pip;
+sudo python3 setup.py install;
+sudo pip3 install pycocotools matplotlib;
 mkdir openpifpaf/outputs;
 mkdir datasets; cd datasets;
 mkdir "data-mscoco";
