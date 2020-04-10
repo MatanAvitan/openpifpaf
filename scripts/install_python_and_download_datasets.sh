@@ -5,6 +5,7 @@ cd openpifpaf;
 sudo apt install python3;
 python3 setup.py install;
 pip3 install pycocotools;
+mkdir openpifpaf/outputs;
 mkdir datasets; cd datasets;
 mkdir "data-mscoco";
 cd "data-mscoco";
