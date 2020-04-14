@@ -64,8 +64,8 @@ setup(
         'pysparkling',  # for log analysis
         'python-json-logger',
         'scipy',
-        'torch>=1.1.0',
-        'torchvision>=0.3',
+        'torch==1.2.0',
+        'torchvision==0.4',
         'pillow<7',  # temporary compat requirement for torchvision
         'cython',
         'opencv-python',
@@ -83,8 +83,8 @@ setup(
         'train': [
             'matplotlib',
             'pycocotools',  # pre-install cython
-            'torch>=1.3.0',
-            'torchvision>=0.4',
+            'torch==1.2.0',
+            'torchvision==0.4',
         ],
     },
 )

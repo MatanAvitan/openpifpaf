@@ -110,19 +110,20 @@ class Trainer(object):
             targets = [[t.to(self.device, non_blocking=True) for t in head] for head in targets]
 
         # train encoder
-        with torch.autograd.profiler.record_function('model'):
-            outputs = self.model(data)
-        with torch.autograd.profiler.record_function('loss'):
-            loss, head_losses = self.loss(outputs, targets)
+        #with torch.autograd.profiler.record_function('model'):
+        outputs = self.model(data)
+        #with torch.autograd.profiler.record_function('loss'):
+        loss, head_losses = self.loss(outputs, targets)
         if loss is not None:
-            with torch.autograd.profiler.record_function('backward'):
-                loss.backward()
+            #with torch.autograd.profiler.record_function('backward'):
+            loss.backward()
         if apply_gradients:
-            with torch.autograd.profiler.record_function('step'):
-                self.optimizer.step()
-                self.optimizer.zero_grad()
-            with torch.autograd.profiler.record_function('ema'):
-                self.step_ema()
+            #with torch.autograd.profiler.record_function('step'):
+            self.optimizer.step()
+            self.optimizer.zero_grad()
+            #with torch.autograd.profiler.record_function('ema'):
+            self.step_ema()
+
 
         return (
             float(loss.item()) if loss is not None else None,
