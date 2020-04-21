@@ -1,8 +1,5 @@
 FROM nvidia/cuda
 
-ARG PYTHON_VERSION=3.7
-ARG WITH_TORCHVISION=1
-
 # Install some basic utilities
 RUN apt-get update && apt-get install -y \
     curl \
